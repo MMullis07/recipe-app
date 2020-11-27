@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recipes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- for loop that iterates and populates every recipe found in our array of recipes -->
+    <ion-item *ngFor="let recipe of recipes">
+      <!-- ion-avatar will keep image from loading if it is not in sight -->
+      <ion-avatar slot="start">
+        <!-- [src] data binds to recipe.page.ts and the array of recipes we made -->
+        <ion-img [src]="recipe.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label> {{recipe.title}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
